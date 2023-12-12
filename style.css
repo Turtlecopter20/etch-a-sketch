@@ -87,3 +87,9 @@ h2{
 .hidden {
     display: none;
 }
+
+h1{
+    color: #e36e47;
+    font-size: 3em;
+    font-weight: 600;
+}
