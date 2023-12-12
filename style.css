@@ -81,9 +81,9 @@ h2{
 }
 
 #rainbowmode:checked + .labelforbutton { 
-    background: #341d5c;
+    background: #482980;
 }
 
 .hidden {
-    
+    display: none;
 }
