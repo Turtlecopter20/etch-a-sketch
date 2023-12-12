@@ -1,6 +1,6 @@
 #drawingboard {
     display: flex;
-    
+    margin: 1em;
     width: 640px;
     height: 640px;
 }
@@ -13,6 +13,7 @@
     opacity: 0.6;
     -webkit-transition: .2s;
     transition: opacity .2s;
+    margin: 1em;
 
 }
 #slider:hover {
@@ -37,8 +38,52 @@
     height: 100%;
     background-color: rgba(61, 91, 226, 0);
 }
+.buttonscontainer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
 body {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+.labelforbutton {
+        display: inline-block;
+        padding: 0.1em 1.5em;
+        margin: 0.5em;
+        cursor: pointer;
+        color: rgb(240, 240, 240);
+        border-radius: 0.25em;
+        background: rgb(61, 91, 226);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+        transition: 0.3s;
+        user-select: none;
+}
+h2{
+    font-size: 1em;
+    &:hover {
+        background: darken(rgb(61, 91, 226), 10%);
+        color: darken(rgb(240, 240, 240), 10%);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.32);
+      }
+      &:active {
+        transform: translateY(2px);
+        box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0px -1px 0 rgba(0,0,0,0.22); 
+      }
+}
+#normalmode:checked + .labelforbutton { 
+    background: #e36e47;
+}
+
+#gradingmode:checked + .labelforbutton { 
+    background: #deb7aa;
+}
+
+#rainbowmode:checked + .labelforbutton { 
+    background: #341d5c;
+}
+
+.hidden {
+    
 }

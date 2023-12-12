@@ -2,7 +2,13 @@ const drawingBoard = document.querySelector('#drawingboard');
 const numberOfSquares = document.querySelector('#slider');
 const togglingModes = document.querySelectorAll("[name='togglingmodes']");
 let n = 16;
-
+const colorSelection = ['#e81416',
+'#ffa500',
+'#faeb36',
+'#79c314',
+'#487de7',
+'#4b369d',
+'#70369d' ];
 function createSquares(n) {for (let i = 1; i <= n; i++){
     const div = document.createElement('div');
     div.setAttribute('class', 'firstsquarerow');
@@ -28,14 +34,15 @@ function addColoringEvent (parent, child) {
 
 let coloring = function color(e) {
     if (togglingModes[0].checked){
-        e.target.style.backgroundColor = 'rgba(61, 91, 226, 1)';
+        gradingColoring(e.target, +1);
     }
     else if (togglingModes[1].checked){
         gradingColoring(e.target, +0.1);
-    };
-    
+    }
+    else if (togglingModes[2].checked){
+        e.target.style.backgroundColor = `${colorSelection[Math.floor(Math.random()*colorSelection.length)]}`;
+    }
 }
-    
 function gradingColoring(wantedColorElement, increment) {
     const value = getComputedStyle(wantedColorElement).getPropertyValue('background-color');
     const parts = value.match(/[\d.]+/g);
