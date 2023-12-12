@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Etch-a-Sketch</h1>
+    <div class = "slidecontainer">
+    <div class = 'buttonscontainer'>
+        <input type= 'radio' name= 'togglingmodes' id = 'normalmode' value = '1' checked='checked'>Normal</input>
+        <input type= 'radio' name= 'togglingmodes' id = 'gradingmode' value = '2'>Grading</input>
+        <input type= 'radio' name= 'togglingmodes' id = 'rainbowmode' value = '3'>Rainbow</input>
+    </div>
+        <input id = 'slider' type="range" min="1" max="100" value="16" class="slider">
+    </div>
+    <div id="drawingboard"></div>
+
+
+    <script src='script.js'></script>
+</body>
+</html>
