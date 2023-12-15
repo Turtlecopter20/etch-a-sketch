@@ -47,6 +47,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(208, 216, 255);
 }
 .labelforbutton {
         display: inline-block;
